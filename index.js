@@ -152,6 +152,7 @@ function parse (opts, cb) {
               // dont parse JSON
               var ext = path.extname(req)
               if (ext === '.json') return debug('skipping JSON', orig)
+              if (ext === '.coffee') return debug('skipping .coffee', orig)
 
               relatives.push(req)
             }
